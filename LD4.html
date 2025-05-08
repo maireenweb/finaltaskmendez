@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Song</title>
+</head>
+<body>
+
+    <div>
+        <label for="times">Times:</label>
+        <input type="text" id="times" /><br />
+        <input type="button" value="Generate Song" onclick="generate();" />
+        <p id="output"></p>
+    </div>
+
+    <script>
+        function generate() {
+            var times = document.getElementById("times").value;
+            times = parseInt(times); // Ensure input is treated as a number
+
+            if (isNaN(times) || times <= 0) {
+                document.getElementById("output").innerHTML = "Please enter a valid number greater than 0.";
+                return;
+            }
+
+            var text = "The wheels on the bus go ";
+
+            for (var i = 1; i <= times; i++) {
+                text += "round and round ";
+            }
+
+            document.getElementById("output").innerHTML = text.trim();
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books - Book Haven</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #444;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      display: inline-block;
+    }
+    nav a:hover {
+      background: #666;
+      border-radius: 5px;
+    }
+    .section {
+      padding: 40px;
+      text-align: center;
+    }
+    .book-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .book {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      width: 200px;
+      transition: transform 0.3s;
+    }
+    .book:hover {
+      transform: scale(1.05);
+    }
+    .book img {
+      width: 150px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .btn {
+      background: #ff6600;
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+    .btn:hover {
+      background: #e65c00;
+    }
+    footer {
+      background: #444;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>📚 Explore Our Book Collection</h1>
+</header>
+
+<nav>
+  <a href="homehref.html">Home</a>
+  <a href="D:\MENDEZ2E\bookhref.html">Books</a>
+  <a href="D:\MENDEZ2E\category.html">Categories</a>
+  <a href="D:\MENDEZ2E\featured.html">Featured</a>
+  <a href="D:\MENDEZ2E\about.html">About Us</a>
+  <a href="D:\MENDEZ2E\contact.html">Support</a>
+</nav>
+
+<section class="section">
+  <h2>📖 Available Books</h2>
+  <div class="book-list">
+    <div class="book">
+      <img src="TGG.jpg" alt="The Great Gatsby">
+      <h3>The Great Gatsby</h3>
+      <p>₱399.00</p>
+      <a href="book-details.html?title=The Great Gatsby" class="btn">View Details</a>
+    </div>
+    <div class="book">
+      <img src="Mockingbird_HERO_0.jpg" alt="To Kill a Mockingbird">
+      <h3>To Kill a Mockingbird</h3>
+      <p>₱450.00</p>
+      <a href="book-details.html?title=To Kill a Mockingbird" class="btn">View Details</a>
+    </div>
+    <div class="book">
+      <img src="hp.jpg" alt="Harry Potter">
+      <h3>Harry Potter</h3>
+      <p>₱500.00</p>
+      <a href="book-details.html?title=Harry Potter" class="btn">View Details</a>
+    </div>
+    <div class="book">
+      <img src="ph-11134207-7rasb-m0xyj354r6w305.jpg" alt="1984 by George Orwell">
+      <h3>1984</h3>
+      <p>₱380.00</p>
+      <a href="book-details.html?title=1984" class="btn">View Details</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy;  Programmed and Developed by Maireen P.Mendez.</p>
+</footer>
+
+</body>
+</html>

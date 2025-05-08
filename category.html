@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categories - Book Haven</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #444;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      display: inline-block;
+    }
+    nav a:hover {
+      background: #666;
+      border-radius: 5px;
+    }
+    .section {
+      padding: 40px;
+      text-align: center;
+    }
+    .category-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .category {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      width: 250px;
+      transition: transform 0.3s;
+    }
+    .category:hover {
+      transform: scale(1.05);
+    }
+    .btn {
+      background: #ff6600;
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+    .btn:hover {
+      background: #e65c00;
+    }
+    footer {
+      background: #444;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>📚 Browse by Categories</h1>
+</header>
+
+<nav>
+  <a href="homehref.html">Home</a>
+  <a href="bookhref.html">Books</a>
+  <a href="D:\MENDEZ2E\category.html">Categories</a>
+  <a href="D:\MENDEZ2E\featured.html">Featured</a>
+  <a href="D:\MENDEZ2E\about.html">About Us</a>
+  <a href="D:\MENDEZ2E\contact.html">Support</a>
+</nav>
+
+<section class="section">
+  <h2>📖 Book Categories</h2>
+  <div class="category-list">
+    <div class="category">
+      <h3>Fiction</h3>
+      <p>Explore stories of imagination, creativity, and adventure.</p>
+      <a href="books.html?category=fiction" class="btn">View Books</a>
+    </div>
+    <div class="category">
+      <h3>Non-Fiction</h3>
+      <p>Discover books filled with real-world knowledge and facts.</p>
+      <a href="books.html?category=non-fiction" class="btn">View Books</a>
+    </div>
+    <div class="category">
+      <h3>Mystery & Thriller</h3>
+      <p>Dive into suspenseful and thrilling stories.</p>
+      <a href="books.html?category=mystery" class="btn">View Books</a>
+    </div>
+    <div class="category">
+      <h3>Fantasy</h3>
+      <p>Enter magical realms and fantastical adventures.</p>
+      <a href="books.html?category=fantasy" class="btn">View Books</a>
+    </div>
+    <div class="category">
+      <h3>Science Fiction</h3>
+      <p>Explore futuristic worlds, space travel, and advanced technology.</p>
+      <a href="books.html?category=scifi" class="btn">View Books</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy;  Programmed and Developed by Maireen P.Mendez.</p>
+</footer>
+
+</body>
+</html>
