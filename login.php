@@ -93,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       <button type="submit">Login</button>
       <p id="errorMessage"><?php echo htmlspecialchars($error); ?></p>
     </form>
-      <a href="./login.php">Make an account</a>      
+      <a href="./index.php">Make an account</a>      
   </div>
 </body>
 </html>
