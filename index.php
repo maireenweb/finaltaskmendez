@@ -163,6 +163,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             <label for="password">Password</label>
             <input type="password" name="password" minlength="6" required>
+            
+            <label for="Cpass" class="label">Confirm Password</label>
+            <input type="password" id="Cpass" name="Cpass" class="textbox" placeholder="Re-enter password here" required>
+            <span style="color:red;"><?php echo $Cpass_err; ?></span><br><br>
 
             <button type="submit">Create Account</button>
         </form>
