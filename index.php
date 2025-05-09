@@ -163,7 +163,7 @@ if ($authenticated) {
 <body>
     <div class="form-container">
         <h2>📚 Register for Book Haven</h2>
-        <form action="register.php" method="POST">
+        <form method="POST">
             <label for="username">Username</label>
             <input type="text" name="username" required>
 
