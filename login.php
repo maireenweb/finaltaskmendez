@@ -104,7 +104,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 <body>
   <div class="login-container">
     <h2>📚 Book Haven Login</h2>
-    <form action="login.php" method="POST">
+    <form method="POST">
       <input type="text" name="username" placeholder="Enter username" required /><br />
       <input type="password" name="password" placeholder="Enter password" required /><br />
       <button type="submit">Login</button>
