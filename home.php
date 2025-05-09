@@ -145,6 +145,7 @@ if (!isset($_SESSION["email"])) {
   <a href="D:\MENDEZ2E\featured.html">Featured</a>
   <a href="D:\MENDEZ2E\about.html">About Us</a>
   <a href="D:\MENDEZ2E\contact.html">Support</a>
+  <a href="./logout.php">Log Out</a>
 </nav>
 
 <div class="container">
