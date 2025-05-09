@@ -178,3 +178,6 @@ if ($authenticated) {
     </div>
 </body>
 </html>
+<?php
+}
+?>
