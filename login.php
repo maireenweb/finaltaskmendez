@@ -1,43 +1,33 @@
 <?php
-
 session_start();
 
-$email = "";
+$username = "";
 $error = "";
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $email = trim($_POST['em-auth']);
-    $password = trim($_POST['pass-auth']);
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $username = trim($_POST['username']);
+    $password = trim($_POST['password']);
 
-    if(empty($email) || empty($password)){
-        $error = "Email and/or Password is required.";
-    } else{
+    if (empty($username) || empty($password)) {
+        $error = "Username and/or Password is required.";
+    } else {
         include "tools/db.php";
         $dbConnection = getDBConnection();
-     
+
         $statement = $dbConnection->prepare(
-            "SELECT id, username, password, createdAt FROM users WHERE email = ?"
+            "SELECT id, email, password, createdAt FROM users WHERE username = ?"
         );
-
-        $statement->bind_param('s',$email);
+        $statement->bind_param('s', $username);
         $statement->execute();
+        $statement->bind_result($id, $email, $stored_password, $createdAt);
 
-
-        $statement->bind_result($id, $username, $stored_password, $createdAt);
-
-
-
-
-        
-
-        if($statement->fetch()){
-
-            if(password_verify($password,$stored_password)){
+        if ($statement->fetch()) {
+            if (password_verify($password, $stored_password)) {
                 $_SESSION["id"] = $id;
                 $_SESSION["username"] = $username;
                 $_SESSION["email"] = $email;
                 $_SESSION["createdAt"] = $createdAt;
-                
+
                 header("location: ./home.php");
                 exit;
             }
@@ -45,10 +35,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
         $statement->close();
 
-        $error = "Email or Password Invalid";
+        $error = "Username or Password Invalid";
     }
 }
-
 ?>
 <html lang="en">
 <head>
@@ -102,7 +91,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
       <input type="text" name="username" placeholder="Enter username" required /><br />
       <input type="password" name="password" placeholder="Enter password" required /><br />
       <button type="submit">Login</button>
-      <p id="errorMessage"><?php if(isset($_GET['error'])) echo htmlspecialchars($_GET['error']); ?></p>
+      <p id="errorMessage"><?php echo htmlspecialchars($error); ?></p>
     </form>
   </div>
 </body>
