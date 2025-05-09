@@ -1,12 +1,20 @@
 <?php
-$host = 'localhost';
+function getDBConnection(){
+
+$host = 'nozomi.proxy.rlwy.net';
+$port = 55925;
 $user = 'root';
-$pass = '';
-$dbname = 'registration_system';
+$password = 'DMvVBHytQMeJnAjcfWUqllFbNfkjwjCd';
+$dbname = 'railway';
 
-$conn = new mysqli($host, $user, $pass, $dbname);
+// Create connection
+$connection = new mysqli($host, $user, $password, $dbname, $port);
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if($connection->connect_error){
+    die("Error: Failed to connect to MySQL. ".$connection->connect_error);
 }
+
+return $connection;
+}
+
 ?>
